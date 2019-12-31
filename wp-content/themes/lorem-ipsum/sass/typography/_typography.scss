@@ -1,0 +1,23 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:500,800,900&display=swap');
+$font__main : 'Raleway', sans-serif;
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: $color__text-main;
+	font-family: $font__main;
+	@include font-size(1);
+	line-height: $font__line-height-body;
+    font-weight: 500;
+}
+
+@import "headings";
+
+@import "copy";
+
+
+

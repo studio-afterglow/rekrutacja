@@ -1,0 +1,190 @@
+html {
+	box-sizing: border-box;
+    background-color: #fff;
+}
+
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+body {
+	background: $color__indigo; /* Fallback for when there is no custom background color defined. */
+}
+
+/*   HEADER   */
+
+.site-title > a{
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.header-widgets{
+    border-bottom: solid rgba(255,255,255,.3) 1px;
+}
+.header-widgets>.row{
+    margin-top: 1em;
+    @include center-content;
+}
+.social-media a{
+    margin-right: 1em;
+}
+.contact-info img{
+    float: left;
+    margin-right: 0.5em;
+    margin-top: 5px;
+}
+.contact-widget{
+    display: grid;
+    grid-template-columns: 3fr 4fr 1fr;
+}
+.search{
+    float: right;
+}
+.site-header-2>.row{
+    @include center-content;
+}
+
+
+.content-area{
+    background-image: url("https://raw.githubusercontent.com/studio-afterglow/rekrutacja/master/rocket.png");
+    background-position: bottom right;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.site-main{
+    @include center-content;
+    padding-left: 25px;
+}
+.main-site-content{
+    width: 50%;
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+}
+.main-site-content h1{
+    font-weight: 700;
+}
+.main-site-content button{
+    padding: 15px 32px;
+    @include button-style;
+}
+
+.main-site-content button:hover{
+    @include button-hover;
+}
+
+.site-footer{
+    background-color: #fff;
+    height: 50px;
+}
+
+.main-navigation{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#form-popup{
+    border-radius: 8px;
+    text-align: center;
+    color: black;
+}
+.modal-content{
+    padding: 2em 2em 0 2em;
+    margin-top: 10vw;
+}
+.modal-dialog{
+    margin-right: 150px;
+}
+
+#form-popup h2{
+    color: $color__indigo;
+    font-weight: 600;
+}
+#form-popup p{
+    color: #9a9a9a;
+}
+.wpcf7-submit{
+    width: 100%;
+}
+
+#site-navigation{
+    display: flex;
+    align-items: center;
+}
+ul.nav-menu > .menu-item-has-children > a::after {
+    content: "ᐯ";
+    font-size: 12px;
+    padding-left: 10px;
+}
+.main-navigation li{
+    padding: 1em;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.main-navigation li ul{
+    background-color: #fff;
+}
+.main-navigation li ul li{
+    padding: 0.5em;
+}
+menu-menu-glowne-container{
+    margin-left: auto;
+}
+.main-navigation li ul a{
+    color: $color__indigo;
+}
+.main-navigation li ul a:hover{
+    color: #c3c3e6;
+}
+
+hr {
+	background-color: $color__background-hr;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+
+
+@import "lists";
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+
+figure {
+	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
+}
+
+@import "tables";
+
+@media (max-width: 1120px){
+    .contact-widget{
+        grid-template-columns: 1fr;
+        margin-bottom: 1em;
+    }
+}
+
+@media (max-width: 990px) {
+    .contact-info{
+        padding-bottom: 1em;
+    }
+    .social-media{
+       padding-bottom: 1em; 
+    }
+    .modal-dialog{
+    margin-right: auto;
+    margin-top: 10vh;
+}
+}
+@media (max-width: 500px){
+    .main-site-content{
+        width: 90%;
+        padding-top: 0;
+        padding-bottom: 100px;
+    }
+    .content-area{
+        background-size: auto 200px;
+    }
+}

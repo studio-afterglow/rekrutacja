@@ -1,0 +1,56 @@
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * 16) * 1px;
+	font-size: $sizeValue * 1rem;
+}
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Center for site content
+@mixin center-content {
+	margin-left: auto;
+	margin-right: auto;
+    width: 85%;
+}
+
+
+// Clearfix
+@mixin clearfix() {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after() {
+	clear: both;
+}
+
+// Column width with margin
+@mixin column-width($numberColumns: 3) {
+	width: map-get( $columns, $numberColumns ) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
+}
+
+@mixin button-style{
+    background-color: $color__orange;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    font-weight: 800;
+    letter-spacing: 1px;
+    transition-duration: 150ms;
+    border-radius: 5px;
+    padding: 15px 32px;
+    font-size: 16px;
+    border: solid $color__orange 1px;
+}
+
+@mixin button-hover{
+    background-color: #fff;
+    color: $color__orange;
+}
